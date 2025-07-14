@@ -4,12 +4,12 @@ hook.Add("HUDPaint", "CustomWatermark", function()
     local steamName = LocalPlayer():Nick()
     local fps = math.Round(1 / FrameTime())
     local ping = LocalPlayer():Ping()
-    local serverIP = game.GetIPAddress() or "N/A"
+    -- local serverIP = game.GetIPAddress() or "N/A"
 
     local timeStr = os.date("%H:%M:%S")
 
     local prefix = "Chieftain.cc"
-    local rest = string.format(" | %s | FPS: %d | Ping: %d ms | Time: %s", steamName, fps, ping, serverIP, timeStr)
+    local rest = string.format(" | %s | FPS: %d | Ping: %d ms | Time: %s", steamName, fps, ping, timeStr)
 
     surface.SetFont("Trebuchet24")
     local prefixW, prefixH = surface.GetTextSize(prefix)
