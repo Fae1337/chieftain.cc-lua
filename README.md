@@ -1,4 +1,4 @@
-<img src="https://chieftain.cc/data/avatars/o/0/108.jpg?1747490935">
+<img src="https://chieftain.cc/styles/purplefreak/logo.png">
 <a href="https://chieftain.cc">chieftain.cc</a>   
 
 Chieftain.cc lua scripts : )
