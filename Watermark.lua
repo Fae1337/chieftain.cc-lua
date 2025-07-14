@@ -9,7 +9,7 @@ hook.Add("HUDPaint", "CustomWatermark", function()
     local timeStr = os.date("%H:%M:%S")
 
     local prefix = "Chieftain.cc"
-    local rest = string.format(" | %s | FPS: %d | Ping: %d ms | IP: %s | Time: %s", steamName, fps, ping, serverIP, timeStr)
+    local rest = string.format(" | %s | FPS: %d | Ping: %d ms | Time: %s", steamName, fps, ping, serverIP, timeStr)
 
     surface.SetFont("Trebuchet24")
     local prefixW, prefixH = surface.GetTextSize(prefix)
