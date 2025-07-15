@@ -1,16 +1,16 @@
-hook.Add("HUDPaint", "CustomWatermark", function()
-    surface.CreateFont("Trebuchet20", {
-        font = "Trebuchet MS",
-        size = 25,-- свой размер
-        weight = 500,
-    })
+surface.CreateFont("Trebuchet20", {
+    font = "Trebuchet MS",
+    size = 25,
+    weight = 500,
+})
 
+hook.Add("HUDPaint", "CustomWatermark", function()
     local scrW, scrH = ScrW(), ScrH()
 
     local steamName = LocalPlayer():Nick()
     local fps = math.Round(1 / FrameTime())
     local ping = LocalPlayer():Ping()
-    -- local serverIP = game.GetIPAddress() --
+    -- local serverIP = game.GetIPAddress()
 
     local timeStr = os.date("%H:%M:%S")
 
@@ -19,7 +19,7 @@ hook.Add("HUDPaint", "CustomWatermark", function()
 
     surface.SetFont("Trebuchet20")
     local prefixW, prefixH = surface.GetTextSize(prefix)
-    local restW, restH = surface.GetTextSize(rest)
+    local restW, _ = surface.GetTextSize(rest)
     local totalW = prefixW + restW
 
     surface.SetDrawColor(0, 0, 0, 235)
